@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "FulvioReplace",
+  "version": "1.1",
+  "description": "Reemplaza imágenes, miniaturas de videos y fondos de iframes con puro arte.",
+  "permissions": ["activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Activar reemplazo de imágenes y videos"
+  }
+}
